@@ -1,8 +1,8 @@
 // Error / Exception handling: ex_tr.js
 const PI = 3.14;
-console.log("Try to change PI...");
+//console.log("Try to change PI...");
 //PI =99;
-//console.log("Try to change PI!");
+console.log("Try to change PI!");
 
 try {
     PI = 99;

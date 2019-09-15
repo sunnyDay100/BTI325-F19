@@ -21,6 +21,24 @@ app.get("/about", function(req, res){
    res.sendFile(path.join(__dirname,"/views/about.html"));
 });
 
+/* array of functions, next */
+var cb0 = function (req, res, next) {
+    console.log("CB0");
+    next();
+};
+
+var cb1 = function(req, res, next) {
+    console.log("CB1");
+    next();
+};
+
+app.get("/array", [cb0, cb1], function(req, res, next){
+    console.log(" array of call back funcitons.");
+    next();
+}, function (req, res){
+    res.send("2nd function");
+});
+
 //setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, onHttpStart);
 

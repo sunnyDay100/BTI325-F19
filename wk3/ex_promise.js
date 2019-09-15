@@ -4,7 +4,9 @@ function outputA(){
     return new Promise(function(resolve, reject){
         setTimeout(function(){
             console.log("A");
+            //if (...)
             resolve("Output A resolved.");
+            console.log("After resolve.")
         }, randomTime);
     });
 }

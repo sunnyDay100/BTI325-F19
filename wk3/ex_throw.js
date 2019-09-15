@@ -2,7 +2,7 @@
 function divide (x,y){
     if (y == 0) {
         //throw new Error("Division by Zero");
-         throw {name:"definedError", message: "Division by Zero"};
+         throw {name:"definedError", message: "Division by Zero!!!!!"};
     }
     return x/y;
 }
