@@ -21,7 +21,7 @@ app.get("/about", function(req, res){
    res.sendFile(path.join(__dirname,"/views/about.html"));
 });
 
-/* array of functions, next */
+/* wk 4: array of functions, next 
 var cb0 = function (req, res, next) {
     console.log("CB0");
     next();
@@ -39,6 +39,15 @@ app.get("/array", [cb0, cb1], function(req, res, next){
     res.send("2nd function");
 });
 
+app.get("/headers", (req,res)=>{
+    //const headers = req.headers;
+    res.send(req.headers);
+})
+
+app.use((req, res)=>{
+    res.status(404).send("Page not found.");
+});
+*/
 //setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, onHttpStart);
 
