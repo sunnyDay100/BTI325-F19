@@ -1,0 +1,33 @@
+<!-- registerUser.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Register User</title>
+        <style>
+            .center {
+                width : 50%;
+                margin: auto;
+                padding: 10px;
+                border: dotted red 2px;
+                background: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "center">
+        <h1> Week 5 - Forms with Express.js </h1>
+        <h3> Registration </h3>
+        <form name="register" method = "post" 
+            enctype = "multipart/form-data"
+            action = "/register-user">
+            <p> Name: <input type = "text" name = "name"> </p>
+            <p> User Name: <input type = "text" name = "userName"> </p>
+            <p> Email: <input type = "email" name = "email"> </p>
+            <p> Password: <input type = "password" name = "password"> </p>
+            <p> Photo: <input type = "file" name = "photo"> </p> <br>
+            <p> <input type = "submit" value = "Submit"> 
+                <input type = "reset"> </p>
+        </form>
+    </div>
+    </body>
+</html>
