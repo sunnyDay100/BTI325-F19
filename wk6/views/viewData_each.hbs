@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> View Data using Handle Bar </title>
+    </head>
+    <body>
+        <table border = '1'>
+            <tr> 
+                <th> Name</th>
+                <th> Age </th>
+                <th> Occupation </th>
+                <th> Company </th>
+            </tr>
+            {{#each data}}
+                <tr>
+                    <td> {{name}} </td>
+                    <td> {{age}} </td>
+                    <td> {{occupation}} </td>
+                    <td> {{company}} </td>
+                </tr>
+            {{else}}
+                <tr>
+                    <td colspan = "4"> No data</td>
+                </tr>
+            {{/each}}
+        </table>
+    </body>
+</html>
