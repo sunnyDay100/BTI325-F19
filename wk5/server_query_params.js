@@ -23,7 +23,7 @@ app.get("/about", function(req, res){
 
 //localhost:8080/user/?uName=Jack&uId=101
 app.get("/user", (req, res)=>{
-   // res.json(req.query); //return    query obj
+    //res.json(req.query); //return    query obj
      res.send('user name: ' + req.query.uName + ", user ID:" + req.query.uId);
 });
 

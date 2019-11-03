@@ -13,8 +13,8 @@ function onHttpStart(){
 app.engine(".hbs", exphbs({
     extname:".hbs",
     helpers:{
-        strong: function(options){
-            return "<strong>" + options.fn(this)+"</strong>";
+        strongABC: function(options){
+            return "<b style='color:red;'>" + options.fn(this)+"</b>";
         }
     }}));
 app.set("view engine", ".hbs");
