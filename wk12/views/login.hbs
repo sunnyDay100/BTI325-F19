@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login </title>
+    </head>
+    <body>
+        {{#if errorMsg}}
+            <h5> {{errorMsg}}</h5>
+        {{else}}
+            <h5> Please Login </h5>
+        {{/if}}
+        <form method="POST" action="/login">
+            <label> Username: </label>
+            <input type="text" name="username"> <br>
+            <label> Password: </label>
+            <input type="password" name="password">
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>

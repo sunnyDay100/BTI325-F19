@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> API testing</title>
+        <script>
+            function makeAJAXRequest(method, url, data){
+                if (data) {
+                    // make an AJAX call using the provided data & method
+                    fetch(url, { 
+                        /* fetch returns a Promise that resolves "response" obj
+                            with methods:
+                            response.text():  returns Promise that resolves text
+                            response.json(): returns Promise that resolves obj
+                        */
+                        method: method,
+                        body: JSON.stringify(data),
+                        headers: {'Content-Type': 'application/json'}
+                    }).then(response=>response.json())
+                    .then(jsonObj =>{ console.log(jsonObj);
+                    
+                    document.getElementById("display").innerHTML = jsonObj.message;
+                    });
+                } else {
+                    //make an AJAX call without providing data
+                    fetch(url, {method: method})
+                    .then(response => response.json())
+                    .then((jsonObj) => {
+                        console.log(jsonObj);
+                        document.getElementById("display").innerHTML = jsonObj.message;
+                    });
+                }
+            }
+            function getAllUsers(){
+                makeAJAXRequest("GET", "/api/users");
+            }
+            function addNewUser(){
+                makeAJAXRequest("POST", "/api/users", {fName: "Bob", lName: "Jones"});
+            }
+
+            function getUserById(){
+                makeAJAXRequest("GET", "/api/users/2");
+            }
+
+            function updateUserById(){
+                makeAJAXRequest("PUT", "/api/users/2", {fName: "Wanda", lName: "Smith"});
+            }
+
+            function deleteUserById(){
+                makeAJAXRequest("DELETE", "/api/users/2");
+            }
+        </script>
+    </head>
+    <body>
+        <p> Test REST API</p>
+        <!-- Get All Users -->
+        <button type = "button" onclick = "getAllUsers()"> Get All Users </button> <br>
+        <button type = "button" onclick = "addNewUser()"> Add New User </button> <br>
+        <button type = "button" onclick = "getUserById()"> Get User By Id </button> <br>
+        <button type = "button" onclick = "updateUserById()"> Update User By Id </button> <br>
+        <button type = "button" onclick = "deleteUserById()"> Delete User By Id </button> <br>
+        <br>
+        <div id="display">
+
+        </div>
+    </body>
+</html>
