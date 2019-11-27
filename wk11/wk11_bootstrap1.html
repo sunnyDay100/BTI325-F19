@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- it is common to place the .js files at the end of the <body> tag as well -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <title> Bootstrap testing </title>
+        <style>
+            .a{background-color:yellow; 
+                font-size: 30px;}
+            .b{background-color:green;}
+            .c{background-color:gray;}
+        </style>
+     
+   </head>
+    <body>
+       <h2 style="text-align:center;"> Bootstrap testing </h2> 
+        <!--
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true">
+                    Dropdown &nbsp; &nbsp; <span class="caret"> </span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li> <a href="https://www.google.com/"> Google </a> </li>
+                    <li> <a href="https://my.senecacollege.ca" target=_blank> My.Seneca </a> </li>
+                </ul>
+            </div>
+        -->
+
+        <!--- navigation bar begins-->
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only"> Toggle navigation </span>
+                        <span class="icon-bar"> abc </span>
+                        <span class="icon-bar"> xyz </span>
+                        <span class="icon-bar"> Good day </span>
+                        <span class="icon-bar"> Hello </span>
+                    </button>
+                    <a class="navbar-brand" href="https://my.senecacollege.ca"> My Seneca </a>
+                </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"> <a href="https://www.google.com"> Google </a></li>
+                        <li> <a href="#"> Link 2 </a></li>
+                        <li> 
+                            <!--- dropdown list begins -->
+                            <ul class= "nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"> </span></a>
+                                    <ul class="dropdown-menu">
+                                        <li> <a href="#"> Action 1 </a></li>
+                                        <li> <a href="#"> Action 2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--- dropdown list ends-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--- navigation bar ends-->
+
+       <!-- <div class="container-fluid"> -->
+        <!-- <div class="container"> -->
+            <div class="container">
+            <div class="row">
+                <div class="col-md-4 a"> 
+                    <span class="glyphicon glyphicon-search">
+                    a11 
+                </span>
+                <p> another para </p>
+                </div>
+                <div class="col-md-4 b">
+                    <span class="glyphicon glyphicon-plus">
+                    a12 </span>
+                </div>
+                <div class="col-md-4 c">a13</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 c">a21</div>
+                <div class="col-md-6 b">a22</div>
+            </div>
+            <div class="row">
+                    <div class="col-md-4 col-md-offset-2 c"> middle cell </div>
+            </div>
+            <br>
+            <button type = "button" class="btn btn-danger active"> Danger </button>
+            <button type = "button" class="btn btn-warning"> Warning </button>
+            <a href="https://www.google.com/" class="btn btn-warning btn-lg"> Google </a>
+
+            <!-- form starts -->
+            <form>
+                <div class="form-group">
+                    <label for="email" class="control-label"> Email </label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your Email">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="control-label"> Password </label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
+                <div class="form-group">
+                    <label for="file" class="control-label"> File upload </label>
+                    <input type="file" id="file">
+                </div>
+                <div class="checkbox">
+                    <label class="control-label">
+                        <input type="checkbox"> Have fun 
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default"> Submit </button>
+            </form>
+            <!-- form ends -->
+
+            <!-- Dismissible Alerts begins -->
+            <div class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type = "button" class="close" data-dismiss = "alert" aria-label="Close">
+                    <span aria-hidden="true"> X </span>
+                </button>
+                <strong> Warning: </strong> Something might wrong.
+            </div>
+             <!-- Dismissible Alerts ends -->
+        </div>  <!-- container -->
+        <!-- Modal Window -->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+            Say something here...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="console.log('saved!'); $('#myModal').modal('hide');">Save changes</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
